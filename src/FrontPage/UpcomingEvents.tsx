@@ -32,7 +32,7 @@ export function UpcomingEvents() {
 }
 
 async function getUpcoming({ pageParam }: { pageParam: number }) {
-    const fetchURL = `https://gg-backend-assignment.azurewebsites.net/api/Events?code===&page=${pageParam}&type=upcoming`;
+    const fetchURL = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${import.meta.env.VITE_CODE}==&page=${pageParam}&type=upcoming`;
     const result = await fetch(fetchURL);
     return result.json() as Promise<EventsQuery>
 }

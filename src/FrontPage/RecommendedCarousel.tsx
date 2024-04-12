@@ -24,7 +24,7 @@ export function RecommendedCarousel() {
 
 
 async function getRecommended() {
-    const fetchURL = "https://gg-backend-assignment.azurewebsites.net/api/Events?code===&type=reco";
+    const fetchURL = `https://gg-backend-assignment.azurewebsites.net/api/Events?code=${import.meta.env.VITE_CODE}==&type=reco`;
     const result = await fetch(fetchURL);
     const json = await result.json() as EventsQuery;
     return json.events
