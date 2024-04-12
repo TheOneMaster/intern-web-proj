@@ -6,3 +6,11 @@ export type EventData = {
     distanceKm: string
     imgUrl: string
 }
+
+export type EventsQuery = {
+    events: EventData[]
+    page: number
+    pageSize: number
+    totalEvents: number
+    totalPages: number
+}
