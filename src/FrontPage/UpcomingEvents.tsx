@@ -22,7 +22,7 @@ export function UpcomingEvents() {
             {
                 data.pages.map(page => {
                     return page.events.map(event => {
-                        return <UpcomingEventCard {...event} />
+                        return <UpcomingEventCard {...event} key={event.eventName} />
                     })
                 })
             }
