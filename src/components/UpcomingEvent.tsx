@@ -8,7 +8,7 @@ export function UpcomingEventCard(props: EventData) {
     const distance = parseInt(props.distanceKm)
 
     return (
-        <div className="flex-col p-4 outline outline-1 outline-[#B0BABF] rounded-xl">
+        <div className="flex-col p-2 outline outline-1 outline-[#B0BABF] rounded-xl">
 
             <div className="relative flex rounded-md overflow-hidden">
                 <img
@@ -20,11 +20,11 @@ export function UpcomingEventCard(props: EventData) {
                 </div>
             </div>
 
-            <div className="mt-5">
+            <div className="mt-3">
                 <span className="font-bold">{props.eventName}</span>
-                <div className="text-subtitle text-sm flex flex-row">
+                <div className="text-subtitle text-sm flex flex-row font-normal">
                     <i className="bi-geo-alt-fill"></i>
-                    <span className="">{props.cityName}</span>
+                    <span className="ml-1">{props.cityName}</span>
                     <div className="ml-auto">
                         <span>{props.weather}</span>
                         |

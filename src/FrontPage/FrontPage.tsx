@@ -15,7 +15,7 @@ export function FrontPage() {
 
             {/* Banner Image */}
 
-            <div className="relative h-[50vh] lg:h-auto border border-lime-500">
+            <div className="relative h-[50vh] lg:h-auto">
                 <img src={bannerImage} className="h-full object-cover w-full"></img>
                 <div className="absolute top-20 mx-10 w-fit text-center text-white lg:top-52 lg:mx-40">
                     <p className="font-bold text-2xl lg:text-5xl">Discover Exciting Events Happening Near You - Stay Tuned For Updates</p>
@@ -44,12 +44,12 @@ export function FrontPage() {
 
             {/* Upcoming Events */}
 
-            <div className="font-bold text-heading -mt-20 mx-20">
+            <div className="font-bold text-heading -mt-20 mx-10 lg:mx-20">
                 <span className="text-xl">Upcoming Events</span>
                 <a className="ml-4">
                     <i className="bi-arrow-right text-xl"></i>
                 </a>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 pb-5">
                     <UpcomingEvents />
                 </div>
             </div>

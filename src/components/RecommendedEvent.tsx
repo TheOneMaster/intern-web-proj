@@ -19,12 +19,12 @@ export function RecommendedEventCard(props: RecommendedEventProps) {
         <div className="relative drop-shadow-md">
             <img
                 src={PlaceholderImage}
-                className="bg-cover min-w-[19rem]"
+                className="bg-cover min-w-56 lg:min-w-[19rem]"
                 />
             <div className="absolute bottom-2 px-2">
                 <div className="flex flex-row">
                     <div>
-                        <p className="text-white font-bold text-xl">{props.eventName}</p>
+                        <p className="text-white font-bold text-lg lg:text-xl">{props.eventName}</p>
                         <p className="text-subtitle text-sm">
                             <i className="bi-geo-alt-fill mr-1"></i>
                             {props.cityName}
