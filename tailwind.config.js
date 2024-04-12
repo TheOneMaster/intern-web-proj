@@ -2,7 +2,15 @@
 export default {
   content: ["**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        display: 'Inter',
+      },
+      textColor: {
+        heading: "#1E2022",
+        subtitle: "#989090"
+      }
+    },
   },
   plugins: [],
 }
