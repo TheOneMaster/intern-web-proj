@@ -22,6 +22,8 @@ export function RecommendedEventCard(props: RecommendedEventProps) {
                 src={img}
                 crossOrigin="anonymous"
                 className="bg-cover min-w-56 lg:min-w-[19rem]"
+                loading="lazy"
+                alt={`${props.eventName} thumbnail`}
                 />
             <div className="absolute bottom-2 px-2">
                 <div className="flex flex-row">

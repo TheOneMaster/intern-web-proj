@@ -23,6 +23,8 @@ export function UpcomingEventCard(props: EventData) {
                     src={img}
                     className="min-w-60 min-h-20 w-full"
                     crossOrigin="anonymous"
+                    loading="lazy"
+                    alt={`${props.eventName} thumbnail`}
                 />
                 <div className="absolute bottom-0 p-3 font-normal text-white bg-black bg-opacity-35 w-full text-left">
                     {dateStr}
