@@ -5,7 +5,7 @@ import { InfiniteScroll } from "../components/Scrollable";
 
 export function UpcomingEvents() {
 
-    const { isLoading, isError, data, fetchNextPage, hasNextPage, status } = useInfiniteQuery({
+    const { isLoading, isError, data, fetchNextPage, hasNextPage } = useInfiniteQuery({
         queryKey: ['upcoming'],
         queryFn: getUpcoming,
         initialPageParam: 1,
