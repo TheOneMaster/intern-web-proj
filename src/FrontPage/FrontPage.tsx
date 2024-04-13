@@ -44,14 +44,12 @@ export function FrontPage() {
 
             {/* Upcoming Events */}
 
-            <div className="font-bold text-heading -mt-20 mx-10 lg:mx-20">
+            <div className="font-bold text-heading -mt-24 mx-10 lg:mx-20">
                 <span className="text-xl">Upcoming Events</span>
                 <a className="ml-4">
                     <i className="bi-arrow-right text-xl"></i>
                 </a>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 pb-5">
-                    <UpcomingEvents />
-                </div>
+                <UpcomingEvents />
             </div>
 
 
