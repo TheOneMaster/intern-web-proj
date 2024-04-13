@@ -19,10 +19,8 @@ export function UpcomingEvents() {
         }
     });
 
-
     if (isLoading) return "Loading...";
     if (isError || data === undefined) return "error loading upcoming events";
-
 
     return (
         <>
@@ -32,6 +30,7 @@ export function UpcomingEvents() {
                 onEndReached={fetchNextPage}
                 containerStyle="grid grid-cols-1 lg:grid-cols-3 gap-10 mt-5 pb-5"
             />
+            {!hasNextPage && <div className="text-center text-lg">No More events available</div>}
         </>
     )
 }
