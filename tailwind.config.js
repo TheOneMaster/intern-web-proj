@@ -9,6 +9,9 @@ export default {
       textColor: {
         heading: "#1E2022",
         subtitle: "#989090"
+      },
+      outlineColor: {
+        display: "#B0BABF"
       }
     },
   },
