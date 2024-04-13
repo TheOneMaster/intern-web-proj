@@ -22,6 +22,7 @@ export function UpcomingEventCard(props: EventData) {
                 <img
                     src={img}
                     className="min-w-60 min-h-20 w-full"
+                    crossOrigin="anonymous"
                 />
                 <div className="absolute bottom-0 p-3 font-normal text-white bg-black bg-opacity-35 w-full text-left">
                     {dateStr}

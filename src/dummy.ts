@@ -12,6 +12,12 @@ export function convertImageToUsable(url: string, type: ImageTypes="recommended"
     // https://issuetracker.google.com/issues/319531488?pli=1
     // Not fixing
 
+    if (import.meta.env.VITE_PLACEHOLDER === "False") {
+        const link = new URL(url);
+        const id = link.pathname.split("/")[3];
+        return `https://drive.lienuc.com/uc?id=${id}`
+    }
+
     switch (type) {
         case "recommended":
             return PlaceholderRecommended

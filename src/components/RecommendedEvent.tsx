@@ -20,6 +20,7 @@ export function RecommendedEventCard(props: RecommendedEventProps) {
         <div className="relative drop-shadow-md">
             <img
                 src={img}
+                crossOrigin="anonymous"
                 className="bg-cover min-w-56 lg:min-w-[19rem]"
                 />
             <div className="absolute bottom-2 px-2">
