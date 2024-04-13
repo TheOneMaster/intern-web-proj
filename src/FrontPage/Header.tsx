@@ -1,6 +1,9 @@
+import { useMediaQuery } from "react-responsive";
 import { placeholderClick } from "../dummy";
 
 export function Header() {
+
+    const isDesktop = useMediaQuery({query: "(min-width: 1024px)"});
 
     const logoSection = (
         <div className="flex flex-col">
@@ -12,8 +15,8 @@ export function Header() {
         </div>
     );
 
-    return (
-        <header className="flex flex-row px-5 lg:px-16 py-4">
+    if (isDesktop) return (
+        <header className="flex flex-row lg:px-16 py-4">
 
             {logoSection}
 
@@ -46,17 +49,7 @@ export function Header() {
 
 
             {/* User Details */}
-            {/* <div className="ml-auto" onClick={placeholderClick}>
-                <button className="p-1">
-                    <i className="bi-search text-gray-600 text-lg"></i>
-                </button>
-                <button className="p-1" onClick={placeholderClick}>
-                    <i className="bi-heart-fill text-gray-600 text-lg"></i>
-                </button>
-                <button className="p-1" onClick={placeholderClick}>
-                    <i className="bi-person-fill text-gray-600 text-lg"></i>
-                </button>
-            </div> */}
+
 
             <div className="ml-auto flex flex-row items-start gap-4">
                 <button className="mt-2">
@@ -65,6 +58,36 @@ export function Header() {
                 </button>
                 <button className="outline outline-1 outline-display p-2 rounded-md">Sign in</button>
             </div>
+
+        </header>
+    )
+
+    return (
+        <header className="px-5 pt-4">
+            <div className="flex flex-row">
+                {logoSection}
+                <div className="ml-auto" onClick={placeholderClick}>
+                    <button className="p-1">
+                        <i className="bi-search text-gray-600 text-lg"></i>
+                    </button>
+                    <button className="p-1" onClick={placeholderClick}>
+                        <i className="bi-heart-fill text-gray-600 text-lg"></i>
+                    </button>
+                    <button className="p-1" onClick={placeholderClick}>
+                        <i className="bi-person-fill text-gray-600 text-lg"></i>
+                    </button>
+                </div>
+            </div>
+
+            <nav className="mt-2 flex flex-row gap-8 overflow-auto whitespace-nowrap">
+                <a className="py-2">Live Shows</a>
+                <a className="py-2">Streams</a>
+                <a className="py-2">Movies</a>
+                <a className="py-2">Plays</a>
+                <a className="py-2">Events</a>
+                <a className="py-2">Sports</a>
+                <a className="py-2">Activities</a>
+            </nav>
 
         </header>
     )
