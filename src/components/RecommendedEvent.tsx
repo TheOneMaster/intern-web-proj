@@ -1,6 +1,5 @@
 import { EventData } from "../FrontPage/types";
-
-import PlaceholderImage from "../assets/Rectangle 2.svg"
+import { convertImageToUsable } from "../dummy";
 
 type RecommendedEventProps = EventData
 
@@ -13,12 +12,14 @@ export function RecommendedEventCard(props: RecommendedEventProps) {
         month: "short",
         day: "numeric",
         year: "numeric"
-    })
+    });
+
+    const img = convertImageToUsable(props.imgUrl, "recommended");
 
     return (
         <div className="relative drop-shadow-md">
             <img
-                src={PlaceholderImage}
+                src={img}
                 className="bg-cover min-w-56 lg:min-w-[19rem]"
                 />
             <div className="absolute bottom-2 px-2">

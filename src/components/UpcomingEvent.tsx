@@ -1,6 +1,6 @@
 import { EventData } from "../FrontPage/types";
 
-import PlaceholderBanner from "../assets/Rectangle 9.svg"
+import { convertImageToUsable } from "../dummy";
 
 export function UpcomingEventCard(props: EventData) {
 
@@ -11,14 +11,16 @@ export function UpcomingEventCard(props: EventData) {
         month: "short",
         day: "numeric",
         year: "numeric"
-    })
+    });
+
+    const img = convertImageToUsable(props.imgUrl, "upcoming");
 
     return (
         <div className="flex-col p-2 outline outline-1 outline-[#B0BABF] rounded-xl">
 
             <div className="relative flex rounded-md overflow-hidden">
                 <img
-                    src={PlaceholderBanner}
+                    src={img}
                     className="min-w-60 min-h-20 w-full"
                 />
                 <div className="absolute bottom-0 p-3 font-normal text-white bg-black bg-opacity-35 w-full text-left">
