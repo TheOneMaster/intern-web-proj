@@ -1,6 +1,5 @@
-import { useEffect } from "react";
-import { useInfiniteQuery } from "@tanstack/react-query"
-import { EventData, EventsQuery } from "./types";
+import { useInfiniteQuery } from "@tanstack/react-query";
+import { EventsQuery } from "./types";
 import { UpcomingEventCard } from "../components/UpcomingEvent";
 import { InfiniteScroll } from "../components/Scrollable";
 
