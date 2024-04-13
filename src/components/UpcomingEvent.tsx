@@ -7,6 +7,12 @@ export function UpcomingEventCard(props: EventData) {
     const date = new Date(props.date);
     const distance = parseInt(props.distanceKm)
 
+    const dateStr = date.toLocaleDateString('en-US', {
+        month: "short",
+        day: "numeric",
+        year: "numeric"
+    })
+
     return (
         <div className="flex-col p-2 outline outline-1 outline-[#B0BABF] rounded-xl">
 
@@ -15,8 +21,8 @@ export function UpcomingEventCard(props: EventData) {
                     src={PlaceholderBanner}
                     className="min-w-60 min-h-20 w-full"
                 />
-                <div className="absolute bottom-0 pl-1 text-white bg-black bg-opacity-35 w-full text-left">
-                    {date.toDateString()}
+                <div className="absolute bottom-0 p-3 font-normal text-white bg-black bg-opacity-35 w-full text-left">
+                    {dateStr}
                 </div>
             </div>
 

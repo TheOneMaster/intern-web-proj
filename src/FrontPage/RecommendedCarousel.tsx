@@ -12,7 +12,7 @@ export function RecommendedCarousel() {
     if (isError || data === undefined) return "Unable to load recommended events";
 
     return (
-        <div className="flex flex-row gap-10 mt-4 overflow-auto">
+        <div className="flex flex-row gap-10 mt-4 overflow-auto pb-4">
             {data.map(event => {
                 return <RecommendedEventCard {...event} key={event.eventName} />
             })}
