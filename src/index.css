@@ -9,3 +9,11 @@ body {
     color: #1E2022;
     box-sizing: border-box;
 }
+
+a {
+    cursor: pointer;
+}
+
+input[name='search']:focus + i {
+    display: none;
+}
